@@ -1,0 +1,8 @@
+.idea/
+cmake-build-*/
+build/
+.stale-windows-build/
+*.map
+*.elf
+*.hex
+*.bin

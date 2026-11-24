@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "STM32F103 ST-Link Debug",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "serverpath": "E:/OpenOCD-20260302-0.12.0/bin/openocd.exe",
+      "gdbPath": "E:/CLion/CLion 2026.2.2/arm/bin/arm-none-eabi-gdb.exe",
+      "executable": "${workspaceFolder}/cmake-build-debug-mingw-1/toukk.elf",
+      "configFiles": [
+        "E:/CLion/CLion 2026.2.2/CFJ_STM32/stm32f1.cfg"
+      ],
+      "device": "STM32F103C8",
+      "runToEntryPoint": "main",
+      "preLaunchTask": "STM32: build"
+    }
+  ]
+}
