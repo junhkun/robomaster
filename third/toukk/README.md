@@ -17,3 +17,8 @@ STATE=RUN,DIR=FWD,STEP=300,LED=1
 - STMicroelectronics STM32F1 HAL 库、UM1850 与 STM32F103C8 数据手册
 - SSD1306 数据手册。本工程的软件 I2C OLED 驱动和精简字模由本人编写，没有直接复制第三方驱动
 - USART1 中断收发直接使用 STM32F1 HAL 库的 `HAL_UART_Receive_IT()` 和 `HAL_UART_Transmit_IT()`
+
+## 思考题
+如果用的是delay延迟阻塞就会出现这种情况，在程序运行中芯片死等结束后才能识别执行。
+改进：可以通过使用外部中断和串口中断解决，也可以对流水灯使用非阻塞延迟的方式，像是使用定时器中断来释放
+芯片使得其能够及时处理执行串口指令和按键信号
